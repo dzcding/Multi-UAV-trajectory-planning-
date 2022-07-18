@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>百度demo</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+<div id="app"></div>
+<div id="aside">
+    <form>
+        输入点集数据:<br>
+        <p><input type="text" value="" id="pointsetinput"></p>
+    </form>
+    <div>
+        选择总区域坐标文件:<br>
+        <input type="file" name="file" multiple="multiple" id="files1" onchange="choosefile()" />
+        <div id="name1"></div>
+        <textarea id="text1" cols="20" rows="3"></textarea>
+    </div>
+    <div>
+        输入旁向重叠率:<br>
+        <input type="number" id="spaceInp" value=0.8 class="" />
+    </div>
+    <div>
+        输入航向重叠率:<br>
+        <input type="number" placeholder="航向重叠率" id="jiangeInp" value=0.8 class="" />
+    </div>
+    <div>
+        输入无人机数量:<br>
+        <input type="number" id="UAVnum" value=3 class="" />
+    </div>
+    <div>
+        选择重点区域坐标文件:<br>
+        <input type="file" name="file" multiple="multiple" id="files" onchange="choosefile()" />
+        <div id="name"></div>
+        <textarea id="text" cols="20" rows="5"></textarea>
+    </div>
+        <button id="crtStepBtn" class="">生成航线</button>
+        <button id="zdhangxian"  class="">生成重点区域航线</button>
+        <button id="fenpei" class="">生成多机航线</button>
+        <button id="huadianBtn" class="">生成航点</button>
+    <div>
+        <p>若浏览器加载不出地图，可能是正在使用chrome浏览器，因为当前页面使用的是https，而地图瓦片是http协议加载的，chrome会出于安全考虑阻止请求</p>
+        <p>可以点击地址栏右边允许页面加载地图瓦片</p>
+    </div>
+</div>
+<script src="FileSaver.js"></script>
+<script type="text/javascript" src="../bmap_offline_demo/map_load.js"></script>
+<script src="lib/cpRPA.js"></script>
+<script src="js/index.baidu3.js"></script>
+<script src="points_2_oblique.js"></script>
+<script src="shiyan.js"></script>
+<script src="action.js"></script>
+<!--地图显现与否取决于index.baidu.js-->
+</body>
+</html>
